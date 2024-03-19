@@ -12,10 +12,9 @@ class Single_basic_block_net(nn.Module):#No Attention, three losses
         band_1 = band# * 50 + 81  # * 4
         self.attention_spectral = Conv_Sobel_Extractor()
         self.global_pooling = nn.AvgPool2d(kernel_size=(11, 11), padding=5, stride=1)
-        # self.global_pooling = nn.MaxPool2d(kernel_size=(11, 11), padding=5, stride=1),Norm=True
         self.conv1 = basic_block(50, 48)#50
         self.batch_norm1 = nn.Sequential(
-            nn.BatchNorm3d(48),  # 动量默认值为0.1
+            nn.BatchNorm3d(48), 
             nn.ReLU(inplace=True)
         )
         self.conv2 = basic_block(48,48)
@@ -84,7 +83,7 @@ class basic_block(nn.Module):
             self.conv_att = nn.Sequential( 
                 nn.Conv3d(in_channels=spat_num, out_channels=spat_num, padding=(0, 0, 0), kernel_size=(4, 1, 1), stride=(1, 1, 1)),
                 nn.Sigmoid()
-                )#batch,channel,4,H,W ——> batch,channel,1,H,W
+                )
         else:
             spec_num = out_dim* 1 // 2#out_dim - 
             self.spec_conv = nn.Conv3d(in_channels=in_dim, out_channels=spec_num, padding=(1, 0, 0), kernel_size=(3, 1, 1), stride=(1, 1, 1))

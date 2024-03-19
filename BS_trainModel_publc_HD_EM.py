@@ -112,7 +112,6 @@ if __name__ == '__main__':
             img, label = data
             img, label = Variable(img).float().cuda(), Variable(label).long().cuda()
             b,c,h,w = img.shape
-            X, weights = model_sel(img)
             predict = model_cls(X)
             predictIndex = torch.argmax(predict, dim=1)
             
