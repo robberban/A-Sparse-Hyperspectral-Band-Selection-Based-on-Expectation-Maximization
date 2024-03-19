@@ -1,1 +1,1 @@
-
+The code is designed to divide and segment data in a sequential manner, following a naming convention that starts with numbers (e.g., 1_xxx, 2_xxx) to ensure an organized and step-by-step data processing workflow.
