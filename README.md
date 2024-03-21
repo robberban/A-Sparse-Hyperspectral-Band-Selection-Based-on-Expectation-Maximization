@@ -13,7 +13,7 @@ To execute the experiment, navigate to the `MNIST_Sparse_test` folder and run th
 
 ```bash
 python MNIST_Test.py
-
+```
 ## Experiment 2: Spectral Band Selection
 
 ### Objective
