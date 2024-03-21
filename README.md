@@ -14,6 +14,7 @@ To execute the experiment, navigate to the `MNIST_Sparse_test` folder and run th
 ```bash
 python MNIST_Test.py
 ```
+
 ## Experiment 2: Spectral Band Selection
 
 ### Objective
@@ -25,10 +26,10 @@ This experiment aims to perform band selection on hyperspectral data, a critical
 2. **Data Splitting:** The HT2013 dataset must be properly split according to the experiment's requirements. Ensure that the data is ready for processing by following the necessary splitting criteria and methods.
 
 ### How to Run
-After preparing the HT2013 dataset, you can proceed with the spectral band selection experiment. 
+After preparing the HT2013 dataset, you can proceed with the spectral band selection experiment:
 
-    ```bash
-    python BS_trainModel_publc_HD_EM.py
-    ```
+```bash
+python BS_trainModel_publc_HD_EM.py
+```
 
 
