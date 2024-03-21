@@ -25,17 +25,10 @@ This experiment aims to perform band selection on hyperspectral data, a critical
 2. **Data Splitting:** The HT2013 dataset must be properly split according to the experiment's requirements. Ensure that the data is ready for processing by following the necessary splitting criteria and methods.
 
 ### How to Run
-After preparing the HT2013 dataset, you can proceed with the spectral band selection experiment. The execution steps will depend on the specific script or program you have developed for this task. Generally, you would:
-
-1. Navigate to the directory containing the experiment script.
-2. Execute the script, typically through a command similar to the following (adjust the script name as necessary):
+After preparing the HT2013 dataset, you can proceed with the spectral band selection experiment. 
 
     ```bash
-    python your_script_name.py
+    python BS_trainModel_publc_HD_EM.py
     ```
 
-Replace `your_script_name.py` with the actual script name designed to perform the spectral band selection on the HT2013 dataset.
 
----
-
-**Note:** Ensure that all necessary dependencies are installed before running the experiment. Follow the provided instructions carefully to replicate the results successfully. If you encounter any issues or have questions, refer to the documentation or raise an issue in the repository.
