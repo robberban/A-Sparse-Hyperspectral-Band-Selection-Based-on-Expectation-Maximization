@@ -63,14 +63,14 @@ optimizer = optim.Adam(model.parameters(), lr=0.003)
 criterion = nn.CrossEntropyLoss()
 
 
-for epoch in range(5):  
+for epoch in range(15):  
     running_loss = 0.0
     for i, data in enumerate(tqdm(trainloader), 0):
         inputs, labels = data
         inputs, labels = Variable(inputs).float().cuda(), Variable(labels).long().cuda()
         optimizer.zero_grad()
         outputs, weights = model(inputs)
-        loss = criterion(outputs, labels) + 1.0 * Loss_EM(weights)
+        loss = criterion(outputs, labels) + 0.1 * Loss_EM(weights)
         loss.backward()
         optimizer.step()
         running_loss += loss.item()
